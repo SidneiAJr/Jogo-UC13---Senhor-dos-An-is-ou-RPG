@@ -7,6 +7,10 @@ public class PlayerStatus: MonoBehaviour
    public int Vidamaxima;
    public int Vida;
    public double Dano_Player;
-   public double armadura;
-   public 
+   public int armadura_player;
+   public double Velocidade_Ataque;
+   public double RouboVida;
+   public int level;
+
+   
 }
