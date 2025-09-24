@@ -19,11 +19,11 @@
     </header>
 
     <main class="container">
-        <div class="form-box">
-            <h1>Bem-vindo</h1>
-            
+    <div class="form-box">
+        <h1>Bem-vindo</h1>
+        <form action="../Backend/php/cadastro.php" method="POST">
             <label for="classe">Classe</label>
-            <select name="classe" id="classe">
+            <select name="classe" id="classe" required>
                 <option value="Mago">Mago</option>
                 <option value="Guerreiro">Guerreiro</option>
                 <option value="Tank">Tank</option>
@@ -31,17 +31,19 @@
             </select>
 
             <label for="nome_usuario">Nome de Usuário</label>
-            <input type="text" id="nome_usuario" placeholder="Digite seu nome">
+            <input type="text" name="nome_usuario" id="nome_usuario" placeholder="Digite seu nome" required>
 
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Digite seu email">
+            <input type="email" name="email" id="email" placeholder="Digite seu email" required>
 
             <label for="senha">Senha</label>
-            <input type="password" id="senha" placeholder="Digite sua senha">
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
 
-            <button class="btn">Cadastrar</button>
-        </div>
-    </main>
+            <button type="submit" class="btn">Cadastrar</button>
+        </form>
+    </div>
+</main>
+
     <footer>
         <p>Todos os Direitos Reservados © Kalleotopia</p>
     </footer>

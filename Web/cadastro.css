@@ -72,9 +72,16 @@ header {
     margin-bottom: 20px;
 }
 
-/* INPUTS */
+/* Cada grupo de label + input alinhado em coluna */
+.form-box label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
 .form-box input,
 .form-box select {
+    width: 100%; /* ocupa toda a largura */
     padding: 10px;
     border-radius: 8px;
     border: none;
@@ -82,11 +89,9 @@ header {
     font-size: 14px;
     background: #fff;
     color: #000;
+    margin-bottom: 15px; /* espaço entre inputs */
 }
 
-.form-box label {
-    font-weight: bold;
-}
 
 /* BOTÃO */
 .btn {
