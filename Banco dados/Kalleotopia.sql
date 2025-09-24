@@ -39,8 +39,8 @@ CREATE TABLE evolucao_classe(
   id_evolucao int primary key auto_increment,
   nome_evolucao varchar(100) not null,
   info_evolucao varchar(100)not null,
-  id_personagem INT,
-FOREIGN KEY (id_personagem) REFERENCES personagem(Id_personagem)
+   id_classe INT,
+  FOREIGN KEY (id_classe) REFERENCES classe(id_classe)
 );
 
 CREATE TABLE personagem_classe (
