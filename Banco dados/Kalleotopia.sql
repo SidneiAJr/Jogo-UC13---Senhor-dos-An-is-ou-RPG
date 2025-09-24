@@ -31,7 +31,8 @@ CREATE TABLE mobs (
   id_mob INT PRIMARY KEY AUTO_INCREMENT,
   nome_mob VARCHAR(55) NOT NULL,
   dano_mob int not null,
-  mobilidade int not null
+  mobilidade int not null,
+  xp_mob_drop int not null
 );
 
 CREATE TABLE evolucao_classe(
