@@ -1,0 +1,11 @@
+Create database kalleotopia;
+
+use kalleotopia;
+
+create table personagem(
+   Id_personagem int primary key auto_increment,
+   nome_personagem varchar(55) not null,
+   classe varchar(55) not null,
+   dano int not null,
+   info_personagem varchar(55)
+);
