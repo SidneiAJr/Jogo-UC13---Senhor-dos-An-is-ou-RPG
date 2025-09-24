@@ -1,7 +1,10 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
 }
 
 /* BODY */
@@ -15,6 +18,7 @@ body {
     cursor: url("espada.cur"), auto;
 }
 
+/* HEADER */
 header {
     background: black;
     padding: 15px 0;
@@ -43,68 +47,79 @@ header {
     font-size: 15px;
     background-color: white;
     border-radius: 12px;
+    padding: 5px 10px;
 }
 
-/* FORM CONTAINER */
-.container {
+/* MAIN */
+main {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 120px 20px 60px; /* espaço pro header */
-}
-
-.form-box {
-    background: rgba(0,0,0,0.6);
-    padding: 30px;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.8);
-    text-align: left;
-}
-
-.form-box h1 {
+    justify-content: center;  /* centraliza horizontal */
+    align-items: center;      /* centraliza vertical */
+    padding: 100px 20px 60px; /* espaço pro header e footer */
     text-align: center;
-    margin-bottom: 20px;
 }
 
-/* INPUTS */
-.form-box input,
-.form-box select {
-    padding: 10px;
+.slide {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    max-width: 600px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide:hover {
+    transform: scale(1.02);
+}
+
+/* FORM */
+form {
+    margin-top: 20px;
+}
+
+.input {
+    padding: 12px 15px;
     border-radius: 8px;
-    border: none;
+    border: 2px solid #b22222;
+    margin-right: 10px;
+    font-size: 16px;
     outline: none;
-    font-size: 14px;
-    background: #fff;
-    color: #000;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    transition: all 0.3s;
 }
 
-.form-box label {
-    font-weight: bold;
+.input:focus {
+    border-color: #ff4500;
+    box-shadow: 0 0 8px #ff4500;
 }
 
 /* BOTÃO */
 .btn {
-    padding: 12px;
     font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background: linear-gradient(to right, #8b0000, #b22222);
+    padding: 12px 28px;
     color: #fff;
+    font-weight: bold;
+    background: linear-gradient(to right, #8b0000, #b22222);
+    border-radius: 10px;
+    border: 2px solid #000;
+    cursor: url("espada.cur"), pointer;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+    display: inline-block;
+    text-align: center;
 }
 
 .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     background: linear-gradient(to right, #b22222, #ff4500);
+    color: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.8);
 }
+
+/* FOOTER */
 footer {
     background: black;
     text-align: center;
@@ -112,4 +127,5 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-size: 14px;
 }
