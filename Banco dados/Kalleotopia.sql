@@ -14,7 +14,7 @@ CREATE TABLE usuario (
   id_usuario INT PRIMARY KEY AUTO_INCREMENT,
   nome_usuario VARCHAR(55) NOT NULL,
   senha VARCHAR(255) NOT NULL,
-  email VARCHAR(255) NOT NULL
+  email VARCHAR(255) NOT NULL UNIQUE
 );
 
 CREATE TABLE classe (
