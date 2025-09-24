@@ -12,5 +12,6 @@ public class PlayerStatus: MonoBehaviour
    public double RouboVida;
    public int level;
 
-   
+   void start(){
+   }
 }
