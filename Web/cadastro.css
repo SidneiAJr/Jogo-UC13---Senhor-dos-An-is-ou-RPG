@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #3a1c1a, #6b1e1e, #b02e0c);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    cursor: url("espada.cur"), auto;
+}
+
+header {
+    background: black;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #e94560;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+/* FORM CONTAINER */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 60px; /* espaço pro header */
+}
+
+.form-box {
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+    text-align: left;
+}
+
+.form-box h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* INPUTS */
+.form-box input,
+.form-box select {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: #fff;
+    color: #000;
+}
+
+.form-box label {
+    font-weight: bold;
+}
+
+/* BOTÃO */
+.btn {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(to right, #8b0000, #b22222);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #b22222, #ff4500);
+}
