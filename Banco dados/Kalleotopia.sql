@@ -1,30 +1,40 @@
-Create database kalleotopia;
+CREATE DATABASE kalleotopia;
 
-use kalleotopia;
+USE kalleotopia;
 
-create table personagem(
-   Id_personagem int primary key auto_increment,
-   nome_personagem varchar(55) not null,
-   classe varchar(55) not null,
-   dano int not null,
-   info_personagem varchar(55)
-);
-create table usuário(
-  id_usuario int primary key auto_increment,
-  nome_usuario varchar(55) not null,
-  senha varchar(255) not null,
-  email varchar(255) not null
+CREATE TABLE personagem (
+   Id_personagem INT PRIMARY KEY AUTO_INCREMENT,
+   nome_personagem VARCHAR(55) NOT NULL,
+   classe VARCHAR(55) NOT NULL,
+   dano INT NOT NULL,
+   info_personagem TEXT
 );
 
-create table classe(
-  id_classe int primary key auto_increment, 
-  nome_classe varchar(55) not null,
-  info_classe varchar(55) not null,
-  dano_classe int not null,
-  velocidadeAtaque_classe decimal(4,2) not null,
-  rouboVida_classe decimal(4,2) not null
+CREATE TABLE usuario (
+  id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+  nome_usuario VARCHAR(55) NOT NULL,
+  senha VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL
 );
-create table mobs (
-  id_mob int primary key auto_increment,
-  nome_mobs enum("slime","goblin") not null
+
+CREATE TABLE classe (
+  id_classe INT PRIMARY KEY AUTO_INCREMENT, 
+  nome_classe VARCHAR(55) NOT NULL,
+  info_classe TEXT NOT NULL,
+  dano_classe INT NOT NULL,
+  velocidadeAtaque_classe DECIMAL(4,2) NOT NULL,
+  rouboVida_classe DECIMAL(4,2) NOT NULL
+);
+
+CREATE TABLE mobs (
+  id_mob INT PRIMARY KEY AUTO_INCREMENT,
+  nome_mob VARCHAR(55) NOT NULL
+);
+
+CREATE TABLE personagem_classe (
+  id_personagem INT,
+  id_classe INT,
+  PRIMARY KEY (id_personagem, id_classe),
+  FOREIGN KEY (id_personagem) REFERENCES personagem(Id_personagem),
+  FOREIGN KEY (id_classe) REFERENCES classe(id_classe)
 );
