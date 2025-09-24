@@ -17,12 +17,14 @@ create table usuário(
 );
 
 create table classe(
-  id_classe primary key auto_increment, 
-  nome_claae varchar(55) not null,
+  id_classe int primary key auto_increment, 
+  nome_classe varchar(55) not null,
   info_classe varchar(55) not null,
-  dano_classe int not null
+  dano_classe int not null,
+  velocidadeAtaque_classe decimal(4,2) not null,
+  rouboVida_classe decimal(4,2) not null
 );
 create table mobs (
-  id_mob primary key auto_increment,
+  id_mob int primary key auto_increment,
   nome_mobs enum("slime","goblin") not null
 );
