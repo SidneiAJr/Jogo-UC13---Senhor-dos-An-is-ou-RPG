@@ -57,3 +57,15 @@ id_usuario int not null,
 FOREIGN KEY (id_personagem) REFERENCES personagem(Id_personagem),
 FOREIGN KEY( id_usuario) REFERENCES usuario(id_usuario)
 );
+
+CREATE TABLE batalhas (
+  id_batalha INT PRIMARY KEY AUTO_INCREMENT,
+  id_personagem INT,
+  id_mob INT,
+  resultado VARCHAR(20) NOT NULL, -- vitoria, derrota, fuga
+  xp_ganho INT,
+  data_batalha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (id_personagem) REFERENCES personagem(id_personagem),
+  FOREIGN KEY (id_mob) REFERENCES mobs(id_mob)
+);
+
