@@ -23,7 +23,8 @@ CREATE TABLE classe (
   info_classe TEXT NOT NULL,
   dano_classe INT NOT NULL,
   velocidadeAtaque_classe DECIMAL(4,2) NOT NULL,
-  rouboVida_classe DECIMAL(4,2) NOT NULL
+  rouboVida_classe DECIMAL(4,2) NOT NULL,
+  mana int not null
 );
 
 CREATE TABLE mobs (
