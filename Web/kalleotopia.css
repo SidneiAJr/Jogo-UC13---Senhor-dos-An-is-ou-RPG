@@ -1,0 +1,99 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #3a1c1a, #6b1e1e, #b02e0c);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    cursor: url("espada.cur"), auto;
+}
+
+header {
+    background: black;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #e94560;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+/* CONTEÚDO */
+/* CONTEÚDO */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* centraliza horizontal */
+    align-items: center;     /* centraliza vertical */
+    padding: 100px 20px 60px; /* deixa espaço pro header e footer */
+    text-align: center;
+}
+
+.slide {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    max-width: 600px;
+    width: 100%;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.btn {
+    font-size: 16px;
+    padding: 12px 28px; /* mesmo espaçamento nos lados */
+    color: #fff;
+    font-weight: bold;
+    background: linear-gradient(to right, #8b0000, #b22222); /* vermelho medieval */
+    border-radius: 10px;
+    border: 2px solid #000;
+    cursor: url("espada.cur"), pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+    display: inline-block; /* garante proporção */
+    text-align: center;    /* centraliza o texto */
+}
+
+
+.btn:hover {
+    transform: scale(1.1); /* cresce suave sem distorcer */
+    background: linear-gradient(to right, #b22222, #ff4500); /* mais claro no hover */
+    color: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.8);
+}
