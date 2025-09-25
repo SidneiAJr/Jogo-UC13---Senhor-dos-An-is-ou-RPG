@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
-public class PlayerStatus : MonoBehaviour
+namespace Kalleotopia
 {
-    public int VidaMaxima;
-    public int Vida;
-    public double Dano_Player;
-    public int Armadura_Player;
-    public double Velocidade_Ataque;
-    public double RouboVida;
-    public int Level;
+    public class Classe
+    {
+        public int IdClasse { get; set; }
+        public string NomeClasse { get; set; }
+        public string InfoClasse { get; set; }
+        public int DanoClasse { get; set; }
+        public decimal VelocidadeAtaqueClasse { get; set; }
+        public decimal RouboVidaClasse { get; set; }
+        public int Mana { get; set; }
+        
+        // Relacionamento com Evoluções de Classe
+        public virtual ICollection<EvolucaoClasse> Evolucoes { get; set; }
 
-    void Start() {
-        Vida = VidaMaxima; // inicia com vida cheia
+        // Relacionamento com Personagens
+        public virtual ICollection<PersonagemClasse> Personagens { get; set; }
+
+        // Construtor padrão
+        public Classe()
+        {
+            Evolucoes = new List<EvolucaoClasse>();
+            Personagens = new List<PersonagemClasse>();
+        }
     }
 }
